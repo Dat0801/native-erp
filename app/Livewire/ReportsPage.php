@@ -9,6 +9,6 @@ class ReportsPage extends Component
     public function render()
     {
         return view('livewire.reports-page')
-            ->layout('layouts.app');
+            ->layout('layouts.native');
     }
 }

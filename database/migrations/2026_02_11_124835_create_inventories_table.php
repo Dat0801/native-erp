@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('inventories', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->constrained('products');
+            $table->unsignedBigInteger('product_id');
             $table->string('location')->nullable();
             $table->integer('quantity_on_hand')->default(0);
             $table->integer('quantity_reserved')->default(0);

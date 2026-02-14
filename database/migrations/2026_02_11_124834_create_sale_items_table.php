@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('sale_items', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('sale_id')->constrained('sales');
-            $table->foreignId('product_id')->constrained('products');
+            $table->unsignedBigInteger('sale_id');
+            $table->unsignedBigInteger('product_id');
             $table->integer('quantity');
             $table->decimal('unit_price', 12, 2);
             $table->decimal('total', 12, 2);
